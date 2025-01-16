@@ -7,7 +7,8 @@ public class RadioTest {
 
     @Test
     void testIncreaseVolume() {
-        Radio radio = new Radio(10, 0, 50);
+        Radio radio = new Radio(10);
+        radio.setVolume(50);
         int volMem = radio.getVolume();
         radio.increaseVolume();
 
@@ -26,7 +27,8 @@ public class RadioTest {
 
     @Test
     void testDecreaseVolume() {
-        Radio radio = new Radio(10, 0, 50);
+        Radio radio = new Radio(10);
+        radio.setVolume(50);
         int volMem = radio.getVolume();
         radio.decreaseVolume();
 
@@ -45,7 +47,8 @@ public class RadioTest {
 
     @Test
     void testNextStation() {
-        Radio radio = new Radio(10, 4, 50);
+        Radio radio = new Radio(10);
+        radio.setStation(4);
         int stationMem = radio.getStation();
         radio.nextStation();
 
@@ -65,7 +68,8 @@ public class RadioTest {
 
     @Test
     void testPrevStation() {
-        Radio radio = new Radio(10, 4, 50);
+        Radio radio = new Radio(10);
+        radio.setStation(4);
         int stationMem = radio.getStation();
         radio.prevStation();
 
